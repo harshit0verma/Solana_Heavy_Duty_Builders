@@ -40,7 +40,7 @@ var web3_js_1 = require("@solana/web3.js");
 var borsh = require("borsh");
 var buffer_1 = require("buffer");
 //helper function
-var secret = Uint8Array.from([235, 40, 10, 64, 103, 203, 112, 117, 0, 161, 229, 107, 59, 46, 85, 214, 156, 63, 28, 86, 234, 180, 40, 202, 130, 28, 93, 92, 93, 20, 0, 154, 200, 252, 178, 189, 229, 217, 189, 78, 149, 73, 178, 38, 122, 198, 198, 165, 141, 226, 197, 19, 200, 160, 236, 246, 5, 137, 186, 163, 99, 100, 121, 227]);
+var secret = Uint8Array.from(process.env.SOLANA_SECRET_KEY);
 var payer_key = web3_js_1.Keypair.fromSecretKey(secret);
 var InstructionType;
 (function (InstructionType) {
